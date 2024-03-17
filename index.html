@@ -4,13 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
+    <script>
+      // JavaScript function to toggle navbar visibility
+      function toggleNav() {
+        var navContainer = document.querySelector(".nav_Container");
+        navContainer.classList.toggle("show");
+      }
+    </script>
     <div class="mainContainer">
-      <div class="nav_Container">
+      <!-- For Laptop Screen -->
+      <div class="nav_Container_Shown">
         <div class="nav_Container_MachineSpace">
-          <span> <img src="./images/MachineIcon.svg" alt="MachineIcon" /></span>
+          <span>
+            <img
+              class="Machine"
+              src="./images/MachineIcon.svg"
+              alt="MachineIcon"
+            />
+          </span>
         </div>
         <div class="nav_Container_LocationSpace">
           <span>
@@ -20,24 +38,644 @@
               alt="LocationIcon"
             />
           </span>
-          <span><img src="./images/Ваш город_ Алматы .svg" /></span>
+          <span>
+            <img class="LocationText" src="./images/Ваш город_ Алматы .svg" />
+          </span>
         </div>
         <div class="nav_Container_ClockSpace">
           <img class="Clock" src="./images/ClockIcon.svg" alt="ClockIcon" />
           <div class="ClockSpace_Content">
             <p class="Clocktext-1">Время работы:</p>
-            <p>с 9:30 до 18:00 Пн-Пт</p>
+            <p class="Clocktext-2">с 9:30 до 18:00 Пн-Пт</p>
           </div>
         </div>
         <div class="nav_Container_ContactSpace">
           <img class="Contact" src="./images/PhoneIcon.svg" alt="PhoneIcon" />
           <div class="ContactSpace_Content">
             <p class="Contacttext-1">+7(863) 203 60 48</p>
-            <p>+7(863) 203 70 33</p>
+            <p class="Contacttext-2">+7(863) 203 70 33</p>
           </div>
         </div>
         <div class="nav_Container_ButtonSpace">
-          <button>Заказать звонок</button>
+          <button class="navBtn">Заказать звонок</button>
+        </div>
+      </div>
+      <!-- For Mobile and Tablet Screen -->
+      <div class="nav_Container">
+        <span class="close-btn" onclick="toggleNav()"> Close </span>
+        <div class="nav_Container_MachineSpace_Hamburger">
+          <span>
+            <img
+              class="Machine"
+              src="./images/MachineIcon.svg"
+              alt="MachineIcon"
+            />
+          </span>
+        </div>
+        <div class="nav_Container_LocationSpace_Hamburger">
+          <span>
+            <img
+              class="Location"
+              src="./images/LocationIcon.svg"
+              alt="LocationIcon"
+            />
+          </span>
+          <span>
+            <img class="LocationText" src="./images/Ваш город_ Алматы .svg" />
+          </span>
+        </div>
+        <div class="nav_Container_ClockSpace_Hamburger">
+          <img class="Clock" src="./images/ClockIcon.svg" alt="ClockIcon" />
+          <div class="ClockSpace_Content">
+            <p class="Clocktext-1">Время работы:</p>
+            <p class="Clocktext-2">с 9:30 до 18:00 Пн-Пт</p>
+          </div>
+        </div>
+        <div class="nav_Container_ContactSpace_Hamburger">
+          <img class="Contact" src="./images/PhoneIcon.svg" alt="PhoneIcon" />
+          <div class="ContactSpace_Content">
+            <p class="Contacttext-1">+7(863) 203 60 48</p>
+            <p class="Contacttext-2">+7(863) 203 70 33</p>
+          </div>
+        </div>
+        <div class="nav_Container_ButtonSpace_Hamburger">
+          <button class="navBtn">Заказать звонок</button>
+        </div>
+      </div>
+
+      <!-- Hamburger icon -->
+      <div class="hamburger">
+        <div class="hamburger-icon" onclick="toggleNav()">
+          <p class="HamburgerImg">Menu</p>
+        </div>
+      </div>
+
+      <!-- ------------------- Navbar ------------------- -->
+      <!-- Hero Page 1 Content -->
+      <div>
+        <div class="main">
+          <div class="main1">
+            <div class="maincontent">
+              Сервисный центер <span style="color: #0391d3">INDESIT</span> в
+              Алматы
+            </div>
+            <div class="SecondText">Обходитесь без лишних затрат</div>
+            <button class="TextBtn">Вызвать мастера</button>
+            <div class="ThirdText">
+              <span style="color: #920707">*</span> Выезд и диагностика
+              бесплатно при условии ремонта
+            </div>
+          </div>
+
+          <div class="main2">
+            <img class="picture" src="./images/ManWithMachine.svg" />
+          </div>
+        </div>
+        <div class="Main_Numbers">
+          <div class="Number_Zero">
+            <img class="Zero" src="./images/0.svg" alt="Zero" />
+            <div class="Number_Content_Zero">
+              <p class="ZeroText-1">₸</p>
+              <p class="ZeroText-2">диагностика</p>
+            </div>
+          </div>
+          <div class="Number_One">
+            <img class="One" src="./images/1.svg" alt="Zero" />
+            <div class="Number_Content_One">
+              <p style="font-weight: bold" class="OneText-1">день</p>
+              <p class="OneText-2">ремонта</p>
+            </div>
+          </div>
+          <div class="Number_Two">
+            <img class="Two" src="./images/3.svg" alt="Zero" />
+            <div class="Number_Content_Two">
+              <p style="font-weight: bold" class="TwoText-1">года</p>
+              <p class="TwoText-1">гарантии</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Page 2 Content -->
+      <div class="Card_Container">
+        <img class="Polyline" src="./images/polyline2.png" />
+        <img class="Ellipse" src="./images/Ellipse.png" />
+        <img class="DoubleCircle" src="./images/DoubleCircle.png" />
+        <img class="LineCircle" src="./images/LineCircle.png" />
+        <div class="CardText">Ремонт любых побутовой техники INDESIT</div>
+        <div class="MainCardContainer">
+          <img
+            class="LeftSwipeIcon"
+            src="./images/LeftSwipeIcon.svg"
+            alt="LeftSwipeIcon"
+          />
+          <div class="MachineCard">
+            <img
+              class="MachineImg"
+              src="./images/MachineCard.svg"
+              alt="MachineCard"
+            />
+          </div>
+          <div>
+            <div class="Card_Content1">
+              <div class="MachineStand">
+                <img
+                  class="StandImg"
+                  src="./images/MachineStand.svg"
+                  alt="MachineStand"
+                />
+              </div>
+              <div class="Cleaner">
+                <img
+                  class="CleanerImg"
+                  src="./images/Cleaner.svg"
+                  alt="Cleaner"
+                />
+              </div>
+            </div>
+            <div class="Card_Content2">
+              <div class="VaccumCleaner">
+                <img
+                  class="VaccumImg"
+                  src="./images/VaccumCleaner.svg"
+                  alt="VaccumCleaner"
+                />
+              </div>
+              <div class="Screen">
+                <img class="ScreenImg" src="./images/Screen.svg" alt="Screen" />
+              </div>
+            </div>
+          </div>
+          <img
+            class="RightSwipeIcon"
+            src="./images/RightSwipeIcon.svg"
+            alt="RightSwipeIcon"
+          />
+        </div>
+        <div class="CardContentButton">
+          <div class="CardContentText">
+            <div class="CardContent_Text1">
+              Не нашли свой продукт в списке, или остались вопросы?
+            </div>
+            <div class="CardContent_Text2">
+              Свяжитесь с менеджером по телефону +7 (778) 065-12-46 или
+            </div>
+          </div>
+          <div class="CardBtn">
+            <button class="CardBtn_Button">Заказать звонок</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Page 3 Content -->
+      <!-- <div class="card">
+        <div class="card-content">
+          <h2 class="H2CardContent">
+            Заказать бесплатный выезд мастера за 30 мин!
+          </h2>
+          <p class="ParaCardContent">
+            Выезд мастера и диагностика бесплатно, при условии ремонта, Мы
+            следим за качеством облуживания. К вам приедет мастер с опытом
+            работы не менее пяти лет. У нас быстро, от 30 минут выезд мастера.
+          </p>
+          <button class="UnderContentBtn">Заказать звонок</button>
+        </div>
+        <img src="./images/Hero-3.svg" alt="Card Image" class="card-image" />
+      </div> -->
+
+      <div class="BgCard">
+        <img class="Lines" src="./images/Ellipse.png" />
+        <img class="Lines1" src="./images/Ellipse.png" />
+        <img class="Dot" src="./images/LineCircle.png" />
+        <img class="Polyline-1" src="./images/polyline23.png" />
+        <div class="Main_Card_Container">
+          <div class="CardHero-Content">
+            <h2 class="H2CardHeroContent">
+              Заказать бесплатный выезд мастера за 30 мин!
+            </h2>
+            <p class="ParaCardHeroContent">
+              Выезд мастера и диагностика бесплатно, при условии ремонта, Мы
+              следим за качеством облуживания. К вам приедет мастер с опытом
+              работы не менее пяти лет. У нас быстро, от 30 минут выезд мастера.
+            </p>
+            <button class="CardHeroContentBtn">Заказать звонок</button>
+          </div>
+          <img
+            src="./images/Her03-1.png"
+            alt="CardHero Img"
+            class="CardHeroImg"
+          />
+        </div>
+      </div>
+
+      <!-- Hero Page 4 Cards -->
+      <div class="ServiceCards_Container">
+        <img class="PolylineHero4" src="./images/PolylineHero4.png" />
+        <img class="HalfCircleHero4" src="./images/HalfCircleHero4.png" />
+        <img class="WhiteLineHero4" src="./images/WhiteLineHero4.png" />
+        <img class="BlueCircle4" src="./images/BlueCircle4.png" />
+        <img class="EllipseHero4" src="./images/EllipseHero4.png" />
+        <img class="EllipseHero4-2" src="./images/EllipseHero4.png" />
+        <img class="EllipseHero4-3" src="./images/EllipseHero4.png" />
+        <img class="LineCircle4" src="./images/LineCircle.png" />
+        <img class="PolylineHero4-2" src="./images/PolylineHero4.png" />
+        <img class="EllipseHero4-4" src="./images/EllipseHero4.png" />
+        <img class="DotHero4" src="./images/DotHero4.png" />
+        <img class="DotHero4-2" src="./images/DotHero4.png" />
+        <img class="LineCircle4-2" src="./images/LineCircle.png" />
+        <img class="PolyLineHero4-4" src="./images/PolyLineHero4-4.png" />
+        <img class="DotHero4-4" src="./images/DotHero4.png" />
+        <img
+          class="CompleteBlueCircleHero4"
+          src="./images/CompleteBlueCircleHero4.png"
+        />
+        <div class="ServiceCards_Heading">
+          Сервис <span style="color: #920707"> INDESIT</span> предлагает лучшие
+          цены
+        </div>
+        <div class="Eight_Cards_Container">
+          <div class="Card-1">
+            <p class="Card-1-Para-1">Ремонт микроволновки</p>
+            <p class="Card-1-Para-2">
+              Замена слюды, магнетрона, восстановление кнопок и др
+            </p>
+            <p class="Card-1-Para-3">ОТ 2500 ₸.</p>
+          </div>
+          <div class="Card-2">
+            <p class="Card-2-Para-1">Ремонт микроволновки</p>
+            <p class="Card-2-Para-2">
+              Замена слюды, магнетрона, восстановление кнопок и др
+            </p>
+            <p class="Card-2-Para-3">ОТ 2500 ₸.</p>
+          </div>
+          <div class="Card-3">
+            <p class="Card-3-Para-1">Ремонт микроволновки</p>
+            <p class="Card-3-Para-2">
+              Замена слюды, магнетрона, восстановление кнопок и др
+            </p>
+            <p class="Card-3-Para-3">ОТ 2500 ₸.</p>
+          </div>
+          <div class="Card-4">
+            <p class="Card-4-Para-1">Ремонт микроволновки</p>
+            <p class="Card-4-Para-2">
+              Замена слюды, магнетрона, восстановление кнопок и др
+            </p>
+            <p class="Card-4-Para-3">ОТ 2500 ₸.</p>
+          </div>
+          <div class="Card-5">
+            <p class="Card-5-Para-1">Ремонт микроволновки</p>
+            <p class="Card-5-Para-2">
+              Замена слюды, магнетрона, восстановление кнопок и др
+            </p>
+            <p class="Card-4-Para-3">ОТ 2500 ₸.</p>
+          </div>
+          <div class="Card-6">
+            <p class="Card-6-Para-1">Расширенная гарантия</p>
+            <p class="Card-6-Para-2">На все запчасти и выполненные услуги/p></p>
+            <p class="Card-6-Para-3">БЕСПЛАТНО</p>
+          </div>
+          <div class="Card-7">
+            <p class="Card-7-Para-1">Расширенная гарантия</p>
+            <p class="Card-7-Para-2">На все запчасти и выполненные услуги</p>
+            <p class="Card-7-Para-3">БЕСПЛАТНО</p>
+          </div>
+          <div class="Card-8">
+            <p class="Card-8-Para-1">Расширенная гарантия</p>
+            <p class="Card-8-Para-2">На все запчасти и выполненные услуги</p>
+            <p class="Card-8-Para-3">БЕСПЛАТНО</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Part 5-->
+      <div class="Double_Heading">Схема работы</div>
+      <div class="DoubleCard_Container">
+        <div class="DoubleCard-1">
+          <div class="OverlapCard-1">1 ШАГ</div>
+          <div class="DoubleContent_Container">
+            <div class="DoubleContent_Icon">
+              <img src="./images/Step1.svg" alt="Step 1 Icon" />
+            </div>
+            <div class="DoubleContent_Flex">
+              <div class="DoubleContent_Text1">Консультация</div>
+              <div class="DoubleContent_Text2">
+                Мы проведем анализ вашего текущего положения, выявим сильные и
+                слабые стороны
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="DoubleCard-1">
+          <div class="OverlapCard-1">2 ШАГ</div>
+          <div class="DoubleContent_Container">
+            <div class="DoubleContent_Icon">
+              <img src="./images/Step2.svg" alt="Step 2 Icon" />
+            </div>
+            <div class="DoubleContent_Flex">
+              <div class="DoubleContent_Text1">Анализ</div>
+              <div class="DoubleContent_Text2">
+                Мы проведем анализ вашего текущего положения, выявим сильные и
+                слабые стороны
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="DoubleCard-1">
+          <div class="OverlapCard-1">3 ШАГ</div>
+          <div class="DoubleContent_Container">
+            <div class="DoubleContent_Icon">
+              <img src="./images/Step3.svg" alt="Step 3 Icon" />
+            </div>
+            <div class="DoubleContent_Flex">
+              <div class="DoubleContent_Text1">Анализ</div>
+              <div class="DoubleContent_Text2">
+                Мы проведем анализ вашего текущего положения, выявим сильные и
+                слабые стороны
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="DoubleCard-1">
+          <div class="OverlapCard-1">4 ШАГ</div>
+          <div class="DoubleContent_Container">
+            <div class="DoubleContent_Icon">
+              <img src="./images/Step4.svg" alt="Step 4 Icon" />
+            </div>
+            <div class="DoubleContent_Flex">
+              <div class="DoubleContent_Text1">Консультация</div>
+              <div class="DoubleContent_Text2">
+                Мы проведем анализ вашего текущего положения, выявим сильные и
+                слабые стороны
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="DoubleCard-1">
+          <div class="OverlapCard-1">5 ШАГ</div>
+          <div class="DoubleContent_Container">
+            <div class="DoubleContent_Icon">
+              <img src="./images/Step5.svg" alt="Step 5 Icon" />
+            </div>
+            <div class="DoubleContent_Flex">
+              <div class="DoubleContent_Text1">Консультация</div>
+              <div class="DoubleContent_Text2">
+                Мы проведем анализ вашего текущего положения, выявим сильные и
+                слабые стороны
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="DoubleCard-1">
+          <div class="OverlapCard-1">6 ШАГ</div>
+          <div class="DoubleContent_Container">
+            <div class="DoubleContent_Icon">
+              <img src="./images/Step6.svg" alt="Step 6 Icon" />
+            </div>
+            <div class="DoubleContent_Flex">
+              <div class="DoubleContent_Text1">Консультация</div>
+              <div class="DoubleContent_Text2">
+                Мы проведем анализ вашего текущего положения, выявим сильные и
+                слабые стороны
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Part 6 -->
+      <div class="BgDiscount">
+        <img class="HeroEll6" src="./images/HeroEll6.png" />
+        <img class="HeroEllipse6" src="./images/HeroEllipse6.png" />
+        <img class="HeroLines6" src="./images/HeroLines6.png" />
+        <img class="HeroLines6-2" src="./images/HeroLines6.png" />
+        <img class="HeroPolyline6" src="./images/HeroPolyline6.png" />
+        <img class="HeroPolyline67" src="./images/HeroPolyline67.png" />
+        <div class="Main_Discount_Container">
+          <div class="Discount-Content">
+            <h2 class="H2DiscountContent">Получите скидку 15% прямо сейчас!</h2>
+            <p class="ParaDiscountContent">
+              Вы выбираете LG, а мы в знак благодарности дарим Вам скидку 15% на
+              все виды ремонтных работ в нашем центре!
+            </p>
+            <button class="DiscountContentBtn">Получить скидку 15%</button>
+          </div>
+          <img
+            src="./images/DiscountImg-2.png"
+            alt="Discount Img"
+            class="DiscountImg"
+          />
+        </div>
+      </div>
+
+      <!-- Hero Part 7 -->
+      <div class="Three_Cards_Heading">Отзывы</div>
+      <div class="Three_Cards_Container">
+        <div class="Main_Three_Card-1">
+          <div class="OverlapThreeCard-1">
+            <img src="./images/Card-1.svg" />
+          </div>
+          <div class="ThreeCard_Content">
+            <div class="ThreeCard_Content_Flex">
+              <div class="LeftArrow">
+                <img src="./images/LeftArrow.svg" alt="LeftArrow" />
+              </div>
+              <div class="ThreeCard_Content_Text1">Константин</div>
+              <div class="ThreeCard_Content_Text2">
+                С сайтом и сервисом этой компании всё просто отлично! Качество
+                товара соответствует заявленному. Буду и впреть пользоваться
+                товарами с этого сайта, и смело могу рекомендовать его людям.
+              </div>
+              <div class="RightArrow">
+                <img src="./images/RightArrow.svg" alt="RightArrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Main_Three_Card-1">
+          <div class="OverlapThreeCard-1">
+            <img src="./images/Card-2.svg" />
+          </div>
+          <div class="ThreeCard_Content">
+            <div class="ThreeCard_Content_Flex">
+              <div class="LeftArrow">
+                <img src="./images/LeftArrow.svg" alt="LeftArrow" />
+              </div>
+              <div class="ThreeCard_Content_Text1">Алина</div>
+              <div class="ThreeCard_Content_Text2">
+                С сайтом и сервисом этой компании всё просто отлично! Качество
+                товара соответствует заявленному. Буду и впреть пользоваться
+                товарами с этого сайта, и смело могу рекомендовать его людям.
+              </div>
+              <div class="RightArrow">
+                <img src="./images/RightArrow.svg" alt="RightArrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Main_Three_Card-1">
+          <div class="OverlapThreeCard-1">
+            <img src="./images/Card-3.svg" />
+          </div>
+          <div class="ThreeCard_Content">
+            <div class="ThreeCard_Content_Flex">
+              <div class="LeftArrow">
+                <img src="./images/LeftArrow.svg" alt="LeftArrow" />
+              </div>
+              <div class="ThreeCard_Content_Text1">Дмитрий</div>
+              <div class="ThreeCard_Content_Text2">
+                С сайтом и сервисом этой компании всё просто отлично! Качество
+                товара соответствует заявленному. Буду и впреть пользоваться
+                товарами с этого сайта, и смело могу рекомендовать его людям.
+              </div>
+              <div class="RightArrow">
+                <img src="./images/RightArrow.svg" alt="RightArrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Part 8 -->
+      <div class="DropDown_Container">
+        <img class="HeroEll7" src="./images/HeroEll6.png" />
+        <img class="HeroEll7-2" src="./images/HeroEll6.png" />
+        <img class="HeroEllipse7" src="./images/HeroEllipse6.png" />
+        <img class="PolyBlue09" src="./images/PolyBlue09.png" />
+        <img class="PolyHero09" src="./images/PolyHero09.png" />
+        <img class="HeroLines7-2" src="./images/HeroLines6.png" />
+        <img class="HeroLines09" src="./images/HeroLines09.png" />
+        <img class="HeroPolyline7" src="./images/HeroPolyline6.png" />
+        <div class="DropDown_Heading">Ответы и вопросы</div>
+        <div class="Grid_DropDown_Container">
+          <div class="Grid_Item">
+            <div class="AngleDown"><i class="fa fa-angle-down"></i></div>
+            <h2 class="Grid_Item_Heading">Как узнать стоимость ремонта?</h2>
+            <p class="Grid_Item_Para">
+              После ремонта устройства проходят контроль качества выполненной
+              работы по 47 пунктам. Это означает, что после ремонта вы получите
+              устройство с работоспособностью в 100%. 1
+            </p>
+          </div>
+          <div class="Grid_Item">
+            <div class="AngleDown"><i class="fa fa-angle-down"></i></div>
+            <h2 class="Grid_Item_Heading">
+              Можно ли вызвать мастера на дом или в офис?
+            </h2>
+            <p class="Grid_Item_Para">
+              После ремонта устройства проходят контроль качества выполненной
+              работы по 47 пунктам. Это означает, что после ремонта вы получите
+              устройство с работоспособностью в 100%. 1
+            </p>
+          </div>
+          <div class="Grid_Item">
+            <div class="AngleDown"><i class="fa fa-angle-down"></i></div>
+            <h2 class="Grid_Item_Heading">
+              Сколько будет длиться диагностика?
+            </h2>
+            <p class="Grid_Item_Para">
+              После ремонта устройства проходят контроль качества выполненной
+              работы по 47 пунктам. Это означает, что после ремонта вы получите
+              устройство с работоспособностью в 100%. 1
+            </p>
+          </div>
+          <div class="Grid_Item">
+            <div class="AngleDown"><i class="fa fa-angle-down"></i></div>
+            <h2 class="Grid_Item_Heading">
+              Не появятся ли новые проблемы после ремонта?
+            </h2>
+            <p class="Grid_Item_Para">
+              После ремонта устройства проходят контроль качества выполненной
+              работы по 47 пунктам. Это означает, что после ремонта вы получите
+              устройство с работоспособностью в 100%. 1
+            </p>
+          </div>
+          <div class="Grid_Item">
+            <div class="AngleDown"><i class="fa fa-angle-down"></i></div>
+            <h2 class="Grid_Item_Heading">Даете ли вы гарантию на ремонт?</h2>
+            <p class="Grid_Item_Para">
+              После ремонта устройства проходят контроль качества выполненной
+              работы по 47 пунктам. Это означает, что после ремонта вы получите
+              устройство с работоспособностью в 100%. 1
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Part 9 -->
+      <div class="Main_Map_Container">
+        <div class="Map_Container">
+          <iframe
+            class="Map_Background"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.643730720274!2d-122.40774168591786!3d37.78752077879119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806e07c65a11%3A0x9b8d2c92a3511a5e!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1637168128322!5m2!1sen!2sus"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="Map_Content_Footer">
+          <div class="Map_Content_Text">Контакты</div>
+          <div class="Map_Content_Location">
+            <span>
+              <img
+                class="MapLocation"
+                src="./images/LocationIcon.svg"
+                alt="LocationIcon"
+              />
+            </span>
+            <span>
+              <img
+                class="MapLocationText"
+                src="./images/Ваш город_ Алматы .svg"
+              />
+            </span>
+          </div>
+          <div class="Map_Content_Clock">
+            <img
+              class="MapClock"
+              src="./images/ClockIcon.svg"
+              alt="ClockIcon"
+            />
+            <div class="MapClock_Content">
+              <p class="MapClocktext-1">Время работы:</p>
+              <p class="MapClocktext-2">с 9:30 до 18:00 Пн-Пт</p>
+            </div>
+          </div>
+          <div class="Map_Content_Phone">
+            <img
+              class="MapContact"
+              src="./images/PhoneIcon.svg"
+              alt="PhoneIcon"
+            />
+            <div class="MapContact_Content">
+              <p class="MapContacttext-1">+7(863) 203 60 48</p>
+              <p class="MapContacttext-2">+7(863) 203 70 33</p>
+            </div>
+          </div>
+          <div class="Map_Content_Button">
+            <button class="MapBtn">Заказать звонок</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Part 10 -->
+      <div class="Footer_BG">
+        <div class="Main_Footer">
+          <div class="Machine_Footer">
+            <div class="Machine_Footer_Icon">
+              <img src="./images/MachineIcon.svg" />
+            </div>
+            <div class="Machine_Footer_Flex">
+              <div class="Machine_Footer_Text1">
+                Ремонт бытовой техники в Алматы.
+              </div>
+              <div class="Machine_Footer_Text2">
+                Обслуживание по Европейским стандартам качества
+              </div>
+            </div>
+          </div>
+          <div class="Copyright_Footer"></div>
+          <span class="Copyright_Footer_Text"
+            >Все права защищены, Алматы 2019
+            <img src="./images/CopyrightIcon.svg"
+          /></span>
         </div>
       </div>
     </div>

@@ -2,40 +2,1572 @@
   box-sizing: border-box;
   margin: 0rem;
 }
+
+/* For Navbar Laptop  */
+.nav_Container_Shown {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+}
+/* ------------------------ Navbar For Tablet and Mobile Screen -------------------*/
 .nav_Container {
   display: flex;
   justify-content: space-evenly;
-  width: 100vw;
-  max-width: 100%;
-  /* height: 20%; */
+  width: 100%;
   padding: 1rem;
-  background-color: aqua;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
 }
+.nav_Container_ClockSpace_Hamburger,
+.nav_Container_ContactSpace_Hamburger {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.nav_Container_LocationSpace_Hamburger {
+  margin-bottom: 1rem;
+}
+.nav_Container_ButtonSpace_Hamburger {
+  text-align: center;
+}
+/* Hamburger icon styles */
+.hamburger {
+  display: none;
+}
+.hamburger-icon {
+  cursor: pointer;
+}
+.HamburgerImg {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+/* Media query for tablet and mobile screens */
+@media only screen and (max-width: 768px) {
+  .nav_Container_Shown {
+    display: none;
+  }
+  .nav_Container {
+    display: none;
+  }
+  .nav_Container.show {
+    display: block;
+    width: 35%;
+    height: 64%;
+    left: 2rem;
+    top: 1.9rem;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 275px) {
+  .nav_Container.show {
+    width: 60%;
+  }
+}
+/* ---------------------------------------------------------------------------- */
+/* Navbar For Desktop */
 .Location {
   margin-top: 1rem;
 }
+
 .nav_Container_ClockSpace,
 .nav_Container_ContactSpace {
   display: flex;
 }
+
 .ClockSpace_Content,
 .ContactSpace_Content {
   margin-left: 0.3rem;
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
 }
+
 .Clock,
 .Contact {
   width: 1rem;
   margin-bottom: 0.7rem;
 }
-/* .nav_Container_ContactSpace {
+
+.Clocktext-1,
+.Contacttext-1 {
+  margin-bottom: 0.2rem;
+  color: #656565;
+}
+
+.Clocktext-2,
+.Contacttext-2 {
+  color: #656565;
+  font-weight: bold;
+}
+
+.navBtn {
+  background-color: #0391d3;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 1.7rem;
+}
+@media only screen and (min-width: 700px) and (max-width: 1333px) {
+  .Machine {
+    width: 2rem;
+  }
+  .Location {
+    margin-top: 0.3rem;
+  }
+  .LocationText {
+    width: 8rem;
+  }
+  .ClockSpace_Content,
+  .ContactSpace_Content {
+    margin-top: -0.2rem;
+    font-size: 0.8rem;
+  }
+  .navBtn {
+    padding: 0.4rem 1rem;
+  }
+  .Main_Numbers {
+    width: 100%;
+    padding: 1rem;
+    top: 32rem;
+    left: 0;
+  }
+  .main {
+    height: 100%;
+    width: 100%;
+  }
+  .main1 {
+    margin-left: 6rem;
+  }
+  .main2 {
+    width: 100%;
+    height: 28rem;
+  }
+  .TextBtn {
+    padding: 1rem 3.5rem;
+  }
+}
+/* Hero Part 1 start   */
+.main {
   display: flex;
+  background-color: #f8f8f8;
+  height: 75vh;
+}
+
+.main1 {
+  width: 50%;
+  margin-left: 12rem;
+  margin-top: 4rem;
+}
+
+.main2 {
+  width: 70%;
+  height: 32.2rem;
+  background-color: #0391d3;
+  border-top-left-radius: 220ex;
+}
+
+.main2 .picture {
+  width: 90%;
+  height: 100%;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.maincontent {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 18rem;
+}
+.SecondText {
+  margin-top: 0.6rem;
+}
+.TextBtn {
+  background-color: #0391d3;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.5rem 5.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.ThirdText {
+  margin-top: 1rem;
+  width: 12rem;
+  font-size: 0.8rem;
+}
+
+.Main_Numbers {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+  padding: 1rem;
+  position: absolute;
+  top: 28rem;
+  left: 17rem;
+}
+.Number_Content_Zero,
+.Number_Content_Two,
+.Number_Content_One {
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  margin: 0.5rem 3rem 0 0.6rem;
+}
+.Zero,
+.Two {
+  width: 1.5rem;
+  margin-left: 1rem;
+}
+.One {
+  width: 1.1rem;
+  margin-left: 1rem;
+}
+.Number_Zero,
+.Number_One {
+  display: flex;
+  border-right: 2px solid #eeeeee;
+}
+.Number_Two {
+  display: flex;
+}
+/* Media Query For Hero 1 Part */
+@media only screen and (max-width: 768px) {
+  .Main_Numbers {
+    left: 20rem;
+  }
+  .TextBtn {
+    padding: 1rem 2.5rem;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1330px) {
+  .Main_Numbers {
+    top: 24rem;
+    left: 13rem;
+  }
+  .main2 {
+    height: 25.3rem;
+  }
+  .Number_Content_Zero,
+  .Number_Content_Two,
+  .Number_Content_One {
+    margin: 0.5rem 1rem 0 0.6rem;
+    font-size: 0.6rem;
+  }
+  .Zero,
+  .Two {
+    width: 1rem;
+    margin-left: 1rem;
+  }
+  .One {
+    width: 0.7rem;
+  }
+  .TextBtn {
+    padding: 1rem 4.5rem;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 899px) {
+  .main {
+    justify-content: center;
+  }
+  .main1 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .main2 {
+    display: none;
+  }
+  .maincontent {
+    margin: 0 auto;
+  }
+  .ThirdText {
+    margin: 2rem auto;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 699px) {
+  .main {
+    display: block;
+  }
+  .main2 {
+    display: none;
+  }
+  .main1 {
+    margin: 0 auto;
+  }
+  .maincontent {
+    width: 100%;
+    padding-top: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .TextBtn {
+    background-color: #0391d3;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+  }
+  .Main_Numbers {
+    width: 100%;
+    left: 0;
+    margin-top: 1rem;
+    top: 20rem;
+  }
+  .SecondText {
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  .ThirdText {
+    width: 100%;
+    text-align: center;
+  }
+  .zero,
+  .two {
+    width: 100%;
+  }
+  .Number_Content_One,
+  .Number_Content_Two,
+  .Number_Content_Zero {
+    margin: 0 0.8rem 0 0.4rem;
+    letter-spacing: 0;
+  }
+}
+/* For Numbers Part */
+@media only screen and (min-width: 320px) and (max-width: 530px) {
+  .Main_Numbers {
+    top: 23rem;
+  }
+}
+@media only screen and (min-width: 539px) and (max-width: 699px) {
+  .CardText {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+  .Main_Numbers {
+    top: 30rem;
+    left: 22rem;
+  }
+}
+
+/* Hero Part 1 End */
+
+/* Hero Part 2 Start */
+.Card_Container {
+  position: relative;
+}
+.Polyline {
+  position: absolute;
+  left: 2rem;
+  z-index: -99;
+}
+.Ellipse {
+  position: absolute;
+  top: 18rem;
+  left: 4rem;
+  z-index: -99;
+}
+.LineCircle {
+  position: absolute;
+  right: 15rem;
+  top: 9rem;
+  z-index: -99;
+}
+.DoubleCircle {
+  position: absolute;
+  right: 6rem;
+  top: 22rem;
+  z-index: -99;
+}
+.CardText {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 6rem;
+}
+.MainCardContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.MachineCard {
+  margin-top: 3rem;
+}
+.Card_Content1,
+.Card_Content2 {
+  display: flex;
+  column-gap: 1rem;
+}
+.Card_Content1 {
+  margin-top: 4rem;
+  margin-bottom: 0.6rem;
+}
+.MachineImg {
+  width: 25rem;
+}
+.StandImg,
+.CleanerImg,
+.VaccumImg,
+.ScreenImg {
+  width: 16.9rem;
+}
+.RightSwipeIcon {
+  margin-left: 1.5rem;
+}
+.CardContentButton {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.CardContent_Text1 {
+  color: #5c5c5c;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.CardContent_Text2 {
+  color: #a4a4a4;
+  font-size: 1rem;
+  text-align: center;
+}
+.CardBtn_Button {
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  background-color: #0391d3;
+  padding: 1rem 2rem;
+}
+/* Media Query For Hero 2 Part */
+@media only screen and (min-width: 750px) and (max-width: 1024px) {
+  .CardText {
+    margin-top: 6rem;
+  }
+  .MachineImg {
+    width: 18rem;
+  }
+  .StandImg,
+  .CleanerImg,
+  .VaccumImg,
+  .ScreenImg {
+    width: 12rem;
+  }
+  .Card_Content1 {
+    margin-top: 3.7rem;
+  }
+  .CardContentButton {
+    flex-direction: column;
+  }
+
+  .CardBtn_Button {
+    margin-top: 1rem;
+  }
+}
+/* Media Query For Hero 2 Part */
+@media only screen and (min-width: 550px) and (max-width: 749px) {
+  .CardText {
+    margin-top: 6rem;
+  }
+  .MachineImg {
+    width: 13rem;
+  }
+  .StandImg,
+  .CleanerImg,
+  .VaccumImg,
+  .ScreenImg {
+    width: 8.6rem;
+  }
+  .Card_Content1 {
+    margin-top: 3.5rem;
+  }
+  .CardContentButton {
+    flex-direction: column;
+  }
+  .CardBtn_Button {
+    margin-top: 1rem;
+  }
+}
+/* Media Query For Hero 2 Part */
+@media only screen and (min-width: 320px) and (max-width: 549px) {
+  .MainCardContainer {
+    display: block;
+  }
+  .RightSwipeIcon,
+  .LeftSwipeIcon {
+    display: none;
+  }
+  .MachineCard {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .CardText {
+    margin-top: 3rem;
+  }
+  .MachineImg {
+    width: 15rem;
+  }
+  .StandImg,
+  .CleanerImg,
+  .VaccumImg,
+  .ScreenImg {
+    width: 13.5rem;
+  }
+  .Card_Content1 {
+    margin-top: 0.5rem;
+  }
+  .Card_Content1,
+  .Card_Content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .CardContentButton {
+    flex-direction: column;
+  }
+  .CardBtn_Button {
+    margin-top: 1rem;
+  }
+}
+/* Hero Part 2 End */
+
+/* ------------- Old Hero Part 3 Card Start -----------*/
+/* .card {
+  background-color: #3ca7db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 5rem auto;
+  width: 80%;
+  max-width: 60%;
+}
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5rem;
+  color: white;
+}
+.card-button {
+  flex: 1;
+  margin-left: 1rem;
+}
+.card-image {
+  height: 100%;
+  object-fit: cover;
+  width: 54%;
+  margin: -3.125rem -0.7rem -1.9rem 0;
+}
+.UnderContentBtn {
+  width: 10rem;
+  border-radius: 2rem;
+  padding: 0.8rem 1rem;
+  background-color: #f3393a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 1rem 0rem;
+}
+.H2CardContent {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.ParaCardContent {
+  font-size: 0.66rem;
 } */
-/* .Contact {
+/* Media Query For Hero Part 3  */
+/* @media only screen and (min-width: 1224px) and (max-width: 1387px) {
+  .H2CardContent {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .UnderContentBtn {
+    margin-top: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+} */
+/* Media Query For Hero Part 3  */
+/* @media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .H2CardContent {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .UnderContentBtn {
+    margin-top: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .card-image {
+    width: 50%;
+    margin: 0;
+  }
+} */
+
+/* Media Query For Hero Part 3  */
+/* @media only screen and (min-width: 375px) and (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 90%;
+    margin: 3rem auto;
+    border-radius: 2rem;
+  }
+  .card-content {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .card-image {
+    width: 60%;
+    margin: 0;
+  }
+  .ParaCardContent {
+    font-size: 0.9rem;
+    margin: 0 4rem;
+  }
+  .UnderContentBtn {
+    margin: 1rem auto;
+  }
+} */
+/* ----------------- Old Hero Part 3 End --------------------*/
+
+/* Hero Part 3 Start */
+.BgCard {
+  position: relative;
+  background-color: #3ca7db;
+  width: 62%;
+  margin: 5rem auto;
+}
+.Dot {
+  position: absolute;
+  top: -2rem;
+  left: -3rem;
+  z-index: -99;
+}
+.Lines {
+  position: absolute;
+  top: -2rem;
+  left: -10rem;
+  z-index: -99;
+}
+.Lines1 {
+  position: absolute;
+  top: -1rem;
+  right: 42rem;
+  z-index: -99;
+}
+.Polyline-1 {
+  position: absolute;
+  top: -7rem;
+  right: -1rem;
+  z-index: -99;
+}
+.Main_Card_Container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem 0; */
+  /* width: 80%; */
+  margin: 0rem auto;
+}
+.CardHero-Content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5rem;
+  color: white;
+}
+.CardHeroImg {
+  object-fit: cover;
+  width: 50%;
+  margin: -2.125rem -0.7rem -0.8rem 0;
+}
+.CardHeroContentBtn {
+  width: 10rem;
+  border-radius: 2rem;
+  padding: 0.8rem 1rem;
+  background-color: #f3393a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 1rem 0rem;
+}
+.H2CardHeroContent {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.ParaCardHeroContent {
+  font-size: 0.66rem;
+}
+/* Media Query For Hero Part 3  */
+@media only screen and (min-width: 1224px) and (max-width: 1387px) {
+  .H2CardHeroContent {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .CardHeroContentBtn {
+    margin-top: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+}
+/* Media Query For Hero Part 3  */
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .H2CardHeroContent {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .CardHeroContentBtn {
+    margin-top: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .CardHeroImg {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+/* Media Query For Hero Part 3  */
+@media only screen and (min-width: 375px) and (max-width: 800px) {
+  .BgCard {
+    border-radius: 4rem;
+    width: 80%;
+  }
+  .Main_Card_Container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 90%;
+    margin: 3rem auto;
+    border-radius: 2rem;
+  }
+  .CardHero-Content {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .CardHeroImg {
+    /* width: 80%;
+    margin: 0; */
+    display: none;
+  }
+  .ParaCardHeroContent {
+    font-size: 0.9rem;
+    /* margin: 0 4rem; */
+  }
+  .CardHeroContentBtn {
+    margin: 1rem auto;
+  }
+}
+/* Hero Part 3 End */
+
+/* For Hero Part 4 Start */
+.ServiceCards_Container {
+  position: relative;
+  background-color: #0391d3;
+}
+.PolylineHero4 {
+  position: absolute;
+  top: -5rem;
+  left: 21rem;
+  /* z-index: -99; */
+}
+.HalfCircleHero4 {
+  position: absolute;
+  top: -2rem;
+  right: 23rem;
+  /* z-index: -99; */
+}
+.WhiteLineHero4 {
+  position: absolute;
+  right: 2rem;
+  top: 8rem;
+  /* z-index: -99; */
+}
+.BlueCircle4 {
+  position: absolute;
+  top: 32rem;
+  left: 8rem;
+  /* z-index: -99; */
+}
+.CompleteBlueCircleHero4 {
+  left: 37rem;
+  position: absolute;
+  bottom: -4rem;
+  z-index: -99;
+}
+.EllipseHero4 {
+  top: 3rem;
+  position: absolute;
+  left: 5rem;
+  /* z-index: -99; */
+}
+.EllipseHero4-2 {
+  position: absolute;
+  top: 3rem;
+  right: 21rem;
+  /* z-index: -99; */
+}
+.EllipseHero4-3 {
+  position: absolute;
+  right: 5rem;
+  top: 23rem;
+  /* z-index: -99; */
+}
+.LineCircle4 {
+  position: absolute;
+  top: 15rem;
+  left: 8rem;
+  /* z-index: -99; */
+}
+.PolylineHero4-2 {
+  position: absolute;
+  top: 12rem;
+  left: 6rem;
+  /* z-index: -99; */
+}
+.EllipseHero4-4 {
+  position: absolute;
+  top: 17rem;
+  left: 10rem;
+  /* z-index: -99; */
+}
+.DotHero4 {
+  position: absolute;
+  top: 9rem;
+  left: 3rem;
+  /* z-index: -99; */
+}
+.DotHero4-2 {
+  position: absolute;
+  bottom: 8rem;
+  left: 12rem;
+  /* z-index: -99; */
+}
+.LineCircle4-2 {
+  position: absolute;
+  bottom: 3rem;
+  right: 15rem;
+  /* z-index: -99; */
+}
+.PolyLineHero4-4 {
+  position: absolute;
+  bottom: -4.7rem;
+  right: 17rem;
+  /* z-index: -99; */
+}
+.DotHero4-4 {
+  position: absolute;
+  bottom: 2rem;
+  right: 37rem;
+  /* z-index: -99; */
+}
+.ServiceCards_Heading {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 4rem;
+  font-weight: bold;
+  color: white;
+}
+.Eight_Cards_Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* padding: 2rem 10rem; */
+  padding: 2rem 2.1rem 5rem 2.1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Card-1,
+.Card-2,
+.Card-3,
+.Card-4,
+.Card-5,
+.Card-6,
+.Card-7,
+.Card-8 {
+  width: calc(21.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+@media (max-width: 1024px) {
+  .Card-1,
+  .Card-2,
+  .Card-3,
+  .Card-4,
+  .Card-5,
+  .Card-6,
+  .Card-7,
+  .Card-8 {
+    width: calc(33.33% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .CompleteBlueCircleHero4,
+  .PolylineHero4,
+  .EllipseHero4,
+  .EllipseHero4-2 {
+    display: none;
+  }
+  .Eight_Cards_Container {
+    padding: 2rem 2rem;
+  }
+  .Card-1,
+  .Card-2,
+  .Card-3,
+  .Card-4,
+  .Card-5,
+  .Card-6,
+  .Card-7,
+  .Card-8 {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .CompleteBlueCircleHero4,
+  .PolylineHero4 {
+    display: none;
+  }
+  .Eight_Cards_Container {
+    padding: 2rem 0rem;
+  }
+  .Card-1,
+  .Card-2,
+  .Card-3,
+  .Card-4,
+  .Card-5,
+  .Card-6,
+  .Card-7,
+  .Card-8 {
+    width: calc(73% - 20px);
+  }
+}
+
+.Card-1-Para-1,
+.Card-2-Para-1,
+.Card-3-Para-1,
+.Card-4-Para-1,
+.Card-5-Para-1,
+.Card-6-Para-1,
+.Card-7-Para-1,
+.Card-8-Para-1 {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.Card-1-Para-2,
+.Card-2-Para-2,
+.Card-3-Para-2,
+.Card-4-Para-2,
+.Card-5-Para-2,
+.Card-6-Para-2,
+.Card-7-Para-2,
+.Card-8-Para-2 {
+  color: #656565;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.Card-1-Para-3,
+.Card-2-Para-3,
+.Card-3-Para-3,
+.Card-4-Para-3,
+.Card-5-Para-3,
+.Card-6-Para-3,
+.Card-7-Para-3,
+.Card-8-Para-3 {
+  color: #ae1a49;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+.Card-6-Para-1,
+.Card-7-Para-1,
+.Card-8-Para-1 {
+  color: white;
+  font-size: 0.9rem;
+}
+.Card-6-Para-2,
+.Card-7-Para-2,
+.Card-8-Para-2 {
+  color: white;
+  font-size: 0.8rem;
+  width: 10rem;
+  color: white;
+}
+.Card-6-Para-3,
+.Card-7-Para-3,
+.Card-8-Para-3 {
+  color: white;
+  font-weight: bold;
+  color: white;
+  font-size: 0.8rem;
+}
+.Card-6 {
+  background-image: url("./images/RedImage.svg");
+}
+.Card-7 {
+  background-image: url("./images/BlackImage.svg");
+}
+.Card-8 {
+  background-image: url("./images/BlueImage.svg");
+}
+/* @media (min-width: 992px) {
+    .card {
+      width: calc(25% - 20px); 
+    }
+  } */
+/* Hero Part 4 End */
+
+/* Hero Part 5 Start */
+.Double_Heading {
+  text-align: center;
+  color: black;
+  padding: 5rem 0rem 5rem 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.DoubleCard_Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.625rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 4rem;
+  max-width: 70%;
+  margin: 0 auto;
+  width: 68%;
+  margin-bottom: 5rem;
+}
+
+.DoubleCard_Container > div {
+  border: 1px solid #3ca7db;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.DoubleContent_Container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.DoubleContent_Icon {
+  margin-right: 20px;
+}
+
+.DoubleContent_Text1 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.DoubleContent_Text2 {
+  margin-top: 10px;
+}
+
+.OverlapCard-1,
+.OverlapCard-2,
+.OverlapCard-3,
+.OverlapCard-4,
+.OverlapCard-5,
+.OverlapCard-6 {
+  width: 20%;
+  background-color: #3ca7db;
+}
+
+.OverlapCard-1,
+.OverlapCard-2,
+.OverlapCard-3,
+.OverlapCard-4,
+.OverlapCard-5,
+.OverlapCard-6 {
+  left: -2rem;
+  width: 5rem !important;
+  height: 5rem !important;
+  margin-bottom: -2.5rem;
+  margin-left: 0rem;
+  position: relative;
+  top: -4rem;
+  z-index: 99;
+  padding: 0.4rem;
+  color: white;
+}
+/* Hero Part 5 End */
+
+/* Hero Part 6 Start */
+.BgDiscount {
+  background-color: #3ca7db;
+  position: relative;
+  /* width: 100%; */
+}
+.HeroEll6 {
+  position: absolute;
+  top: -2rem;
+  left: 6rem;
+  /* z-index: -99; */
+}
+.HeroEllipse6 {
+  position: absolute;
+  bottom: -1rem;
+  left: 19rem;
+  /* z-index: -99; */
+}
+.HeroLines6 {
+  position: absolute;
+  bottom: -6rem;
+  left: 33rem;
+  /* z-index: -99; */
+}
+.HeroLines6-2 {
+  position: absolute;
+  right: 3rem;
+  top: -5rem;
+  /* z-index: -99; */
+}
+.HeroPolyline6 {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  /* z-index: -99; */
+}
+.HeroPolyline67 {
+  position: absolute;
+  bottom: -4.6rem;
+  right: 4rem;
+  /* z-index: -99; */
+}
+.Main_Discount_Container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 1rem 0; */
+  width: 68%;
+  margin: 0rem auto;
+}
+.Discount-Content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5rem;
+  color: white;
+  z-index: 99;
+}
+.DiscountImg {
+  z-index: 99;
+  object-fit: cover;
+  width: 50%;
+  margin: -2.125rem -0.7rem -0.6rem 0;
+}
+.DiscountContentBtn {
+  width: 14rem;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  background-color: #f3393a;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin: 1rem 0rem 2rem 0rem;
+}
+.H2DiscountContent {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.ParaDiscountContent {
+  font-size: 1rem;
+  width: 82%;
+}
+/* Media Query For Hero Part 6  */
+@media only screen and (min-width: 1224px) and (max-width: 1387px) {
+  .H2DiscountContent {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .DiscountContentBtn {
+    margin-top: 0.9rem;
+    /* padding: 0.5rem 0.7rem; */
+    font-size: 0.7rem;
+  }
+}
+/* Media Query For Hero Part 6  */
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+  .H2DiscountContent {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .DiscountContentBtn {
+    margin-top: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .DiscountImg {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+/* Media Query For Hero Part 6  */
+@media only screen and (min-width: 375px) and (max-width: 800px) {
+  .Main_Discount_Container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 90%;
+    margin: 3rem auto;
+    border-radius: 2rem;
+  }
+  .Discount-Content {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .DiscountImg {
+    display: none;
+    /* width: 80%; */
+    /* margin: 0; */
+    /* margin: 0rem 0rem -1.5rem 0rem; */
+  }
+  .H2DiscountContent {
+    font-size: 1.5rem;
+  }
+  .ParaDiscountContent {
+    font-size: 0.9rem;
+    /* margin: 0 4rem; */
+    width: 100%;
+  }
+  .DiscountContentBtn {
+    margin: 1rem auto;
+    font-size: 0.7rem;
+  }
+}
+/* Hero Part 7 Start */
+.Three_Cards_Heading {
+  text-align: center;
+  color: black;
+  padding: 7rem 0rem 6rem 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.Three_Cards_Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.625rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 4rem;
+  max-width: 70%;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.Three_Cards_Container > div {
+  position: relative;
+  border: 1px solid #3ca7db;
+  padding: 0rem 1rem 0 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ThreeCard_Content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.RightArrow {
+  position: absolute;
+  right: 1rem;
+}
+.LeftArrow {
+  position: absolute;
+  top: 3rem;
+}
+
+.ThreeCard_Content_Text1 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ThreeCard_Content_Text2 {
+  margin-top: 10px;
+  color: #afafaf;
+}
+
+.OverlapThreeCard-1 {
+  width: 20%;
+}
+
+.OverlapThreeCard-1 {
+  left: 6rem;
+  /* width: 5rem !important;
+  height: 5rem !important; */
+  margin-bottom: -2.5rem;
+  margin-left: 0rem;
+  position: relative;
+  top: -4rem;
+  z-index: 99;
+  padding: 0.4rem;
+  color: white;
+}
+/* Hero Part 7 End */
+
+/* Hero Part 8 Start */
+.DropDown_Container {
+  background-color: #3ca7db;
+  position: relative;
+}
+.HeroEll7 {
+  position: absolute;
+  top: -2rem;
+  left: 6rem;
+  /* z-index: -99; */
+}
+.HeroEll7-2 {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 45rem;
+  /* z-index: -99; */
+}
+.HeroEllipse7 {
+  position: absolute;
+  bottom: -1rem;
+  left: 11rem;
+  /* z-index: -99; */
+}
+.HeroLines7-2 {
+  position: absolute;
+  right: 3rem;
+  bottom: -5rem;
+  /* z-index: -99; */
+}
+.HeroPolyline7 {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  /* z-index: -99; */
+}
+.PolyBlue09 {
+  position: absolute;
+  right: 2rem;
+  top: -4.5rem;
+  /* z-index: -99; */
+}
+.PolyHero09 {
+  position: absolute;
+  bottom: -3rem;
+  left: 21rem;
+  /* z-index: -99; */
+}
+.HeroLines09 {
+  position: absolute;
+  top: -2rem;
+  left: 26rem;
+  /* z-index: -99; */
+}
+.DropDown_Heading {
+  text-align: center;
+  color: white;
+  padding: 2rem 0rem 0rem 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.Grid_DropDown_Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 20px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem 0rem 4rem 0;
+}
+
+.Grid_Item {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+}
+.Grid_Item_Heading {
+  font-size: 1rem;
+}
+.Grid_Item_Para {
+  font-size: 1rem;
+  display: none;
+}
+.Grid_Item:hover .Grid_Item_Para {
+  display: block;
+}
+.Grid_Item:hover {
+  grid-row: span 2;
+  cursor: pointer;
+}
+.AngleDown {
+  position: absolute;
+  right: 2rem;
+}
+@media only screen and (min-width: 375px) and (max-width: 600px) {
+  .Grid_DropDown_Container {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+  .HeroEll7-2 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .HeroEll7-2,
+  .HeroLines6,
+  .PolyHero09,
+  .HeroLines09 {
+    display: none;
+  }
+}
+/* Hero Part 8 End */
+
+/* Hero Part 9 Start */
+/* .Map_Background {
+  width: 100%;
+} */
+.Main_Map_Container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin-top: 6rem;
+}
+
+.Map_Container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Map_Background {
+  width: 100%;
+  height: 100%;
+}
+
+.Map_Content_Footer {
+  position: absolute;
+  /* width: 25%; */
+  top: 4rem;
+  left: 14rem;
+  background-color: white;
+  padding: 3rem 6rem 3rem 3rem;
+  z-index: 0;
+}
+
+.Map_Content_Text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.Map_Content_Phone,
+.Map_Content_Clock {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.MapClock,
+.MapContact,
+.MapLocation {
   width: 1rem;
-  margin-bottom: 0.7rem;
-} */
-/* .ContactSpace_Content {
-  margin-left: 0.3rem;
-  margin-top: 0.4rem;
-} */
+}
+.Map_Content_Location {
+  margin-bottom: 2rem;
+}
+.MapLocationText {
+  margin-left: 0.7rem;
+}
+.MapBtn {
+  background-color: #0391d3;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3.7rem;
+}
+
+@media (max-width: 768px) {
+  .Map_Content_Footer {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .Main_Map_Container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 576px) {
+  .Map_Content_Footer {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+/* Hero Part 9 End */
+
+/* Hero Part 10 Start */
+.Footer_BG {
+  background-color: #f5f7f9;
+}
+.Main_Footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+}
+.Machine_Footer {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.Copyright_Footer_Text {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.Machine_Footer_Text2,
+.Machine_Footer_Text1,
+.Copyright_Footer_Text {
+  color: #a4a5a5;
+}
+@media (max-width: 768px) {
+  .Main_Footer {
+    display: block;
+  }
+  .Copyright_Footer_Text {
+    justify-content: center;
+  }
+  .Machine_Footer {
+    justify-content: center;
+  }
+}
