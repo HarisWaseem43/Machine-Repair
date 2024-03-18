@@ -248,6 +248,51 @@
   display: flex;
 }
 /* Media Query For Hero 1 Part */
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .main2,
+  .main2 .picture {
+    display: none;
+  }
+  .main1 {
+    margin: 0 auto;
+  }
+  .Zero,
+  .Two {
+    width: 1rem;
+    margin-left: 0.5rem;
+  }
+  .One {
+    width: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  .Number_Content_Zero,
+  .Number_Content_Two,
+  .Number_Content_One {
+    font-size: 0.6rem;
+    margin: 0.3rem 1rem 0 0.6rem;
+  }
+  .Main_Numbers {
+    left: 7.5rem !important;
+  }
+  .maincontent {
+    padding-top: 4rem;
+    font-size: 1rem;
+    width: 9rem;
+    text-align: center;
+  }
+  .SecondText {
+    text-align: center;
+  }
+  .ThirdText {
+    text-align: center;
+  }
+  .TextBtn {
+    padding: 1rem 1rem !important;
+    width: 100%;
+    font-size: 0.6rem;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .Main_Numbers {
     left: 20rem;
@@ -754,7 +799,7 @@
 }
 
 /* Media Query For Hero Part 3  */
-@media only screen and (min-width: 375px) and (max-width: 800px) {
+@media only screen and (min-width: 320px) and (max-width: 800px) {
   .BgCard {
     border-radius: 4rem;
     width: 80%;
@@ -920,6 +965,11 @@
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 99;
+}
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .BlueCircle4 {
+    display: none;
+  }
 }
 @media (max-width: 1024px) {
   .Card-1,
@@ -1122,6 +1172,13 @@
   padding: 0.4rem;
   color: white;
 }
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .DoubleCard_Container {
+    max-width: 80%;
+    width: 100%;
+  }
+}
+
 /* Hero Part 5 End */
 
 /* Hero Part 6 Start */
@@ -1208,6 +1265,16 @@
   width: 82%;
 }
 /* Media Query For Hero Part 6  */
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .DiscountImg,
+  .HeroEllipse6 {
+    display: none;
+  }
+  .Discount-Content {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 1224px) and (max-width: 1387px) {
   .H2DiscountContent {
     margin-top: 1rem;
@@ -1337,6 +1404,11 @@
   padding: 0.4rem;
   color: white;
 }
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .Three_Cards_Container {
+    max-width: 83%;
+  }
+}
 /* Hero Part 7 End */
 
 /* Hero Part 8 Start */
@@ -1430,6 +1502,12 @@
 .AngleDown {
   position: absolute;
   right: 2rem;
+}
+
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .Grid_DropDown_Container {
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
 }
 @media only screen and (min-width: 375px) and (max-width: 600px) {
   .Grid_DropDown_Container {
